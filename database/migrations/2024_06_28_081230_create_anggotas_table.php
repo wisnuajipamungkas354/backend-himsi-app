@@ -21,8 +21,8 @@ return new class extends Migration
             $table->string('no_hp');
             $table->foreignId('id_divisi')
                 ->constrained('id')->on('divisis')
-                ->cascadeOnDelete()
-                ->cascadeOnUpdate();
+                ->cascadeOnUpdate()
+                ->cascadeOnDelete();
             $table->timestamps();
         });
     }

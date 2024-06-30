@@ -8,9 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Anggota extends Model
 {
     use HasFactory;
+    protected $guarded = ['id'];
 
     public function divisi()
     {
-        return $this->hasMany(Divisi::class);
+        return $this->belongsTo(Divisi::class);
     }
 }
